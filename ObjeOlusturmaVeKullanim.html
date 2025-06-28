@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Nesne Oluşturma Ve Kullanım</title>
+    </head>
+    <body>
+        <div id="div_bir"></div>
+        <script>
+            insan = {isim:"Murtaza", soyisim:"Şuayipoğlu",yas:45,Dogumyeri:"BEM - 302"};
+            insan.tamisim = function(){
+                    return this.isim + " " + this.soyisim;
+                }
+            console.log(insan.tamisim());
+            console.log(insan.isim);
+            console.log(insan["soyisim"]);
+            x="yas";
+            console.log(insan[x]);
+
+            /*console.log(insan.araba)*/
+            insan.araba="YOGG";
+            console.log(insan.araba)
+
+            delete insan.araba;
+            console.log(insan.araba)
+            insan.arabalar = {araba1:"Audi",araba2:"Mustang",araba3:"koenigsegg"}
+            console.log("3. arabam = " + insan.arabalar.araba3)
+            document.getElementById("div_bir").innerHTML = 
+            "İsim = "+ insan.tamisim() + "<br>Doğum Yeri =  <b>" + 
+                insan["Dogumyeri"] + "</b><br>Yaş = " + insan.yas;
+        </script>
+    </body>
+</html>

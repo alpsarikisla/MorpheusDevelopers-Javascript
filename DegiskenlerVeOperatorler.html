@@ -1,0 +1,77 @@
+<html>
+    <head>
+       <title>Değişkenler Ve Operatörler</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr><th colspan="2"><h3>Aritmetiksel Operatörler</h3></th></tr>
+            <tr><td>+</td><td>Toplama</td></tr>
+            <tr><td>-</td><td>Çıkarma</td></tr>
+            <tr><td>*</td><td>Çarpma</td></tr>
+            <tr><td>**</td><td>Üs Alma</td></tr>
+            <tr><td>/</td><td>Bölme</td></tr>
+            <tr><td>%</td><td>Mod Alma</td></tr>
+            <tr><td>=</td><td>Atama</td></tr>
+            <tr><td>+=</td><td>Ekleme</td></tr>
+            <tr><td>-=</td><td>Azaltma</td></tr>
+            <tr><td>*=</td><td>Çarp Ata</td></tr>
+            <tr><td>/=</td><td>Böl Ata</td></tr>
+            <tr><td>%=</td><td>Mod Al Ata</td></tr>
+            <tr><td>**=</td><td>Üs Al Ata</td></tr>
+            <tr><th colspan="2"><h3>Karşılaştırma Operatörleri</h3></th></tr>
+            <tr><td>==</td><td>Eşit mi</td></tr>
+            <tr><td>===</td><td>Değeri ve türü eşit mi</td></tr>
+            <tr><td>!=</td><td>Eşit değil mi</td></tr>
+            <tr><td> &gt; </td><td>Büyük mü</td></tr>
+            <tr><td> &lt; </td><td>Küçük mü</td></tr>
+            <tr><td> &gt;= </td><td>Büyük Eşit mi</td></tr>
+            <tr><td> &lt;= </td><td>Küçük Eşit mi</td></tr>
+            <tr><th colspan="2"><h3>Mantık Operatörleri</h3></th></tr>
+            <tr><td>&</td><td>Ve</td></tr>
+            <tr><td>|</td><td>Veya</td></tr>
+            <tr><td>~</td><td>Not</td></tr>
+        </table>
+       <span id="spn_sonuc"></span>
+        <script>
+            var isim = "Murtaza";
+            console.log("Merhaba " + isim);
+            var s1 = 10;
+            var s2 = 15;
+            s1 = "Alp";
+            var sonuc = s1 + s2;
+            console.log("Toplam = " + (s1 + s2));
+            console.log("Sonuç = " + (sonuc/2));
+            /* Javascript TypeSafe Değildir*/
+
+            /*Undefined = Tanımsız*/
+            /*Nan = uyumsuz*/
+
+            var veri = (2 + 3) * 5;
+            document.getElementById("spn_sonuc").innerText = "Sonuç = " + veri;
+
+            var x,y;
+            console.log("x = " + x);
+            console.log("y = " + y);
+            x= 2 * 3;
+            y = 45 + 50;
+            console.log("Çok işlem = " + (x+y));
+
+            metin1="A";
+            metin2="B";
+
+            metinSonuc = metin1 < metin2;
+            console.log("Metin Karşılaştırma = " + metinSonuc)
+
+            metin3 = "Murtaza";
+            metin4 = "Şuayip";
+            console.log("İsim Karşılaştırma = " + (metin3<metin4));
+
+            metin5 = "20";
+            metin6 = "22";
+            console.log("Sayısal Metin Karşılaştırma = " + (metin5 > metin6));
+
+            metin7 =  2 + "3";
+             console.log("Sayısal Metin Ekleme = " + metin7);
+        </script>
+    </body>
+</html>

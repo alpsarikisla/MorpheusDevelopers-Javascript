@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Koşullar</title>
+    </head>
+    <body>
+        <button type="button" onclick="selamver()">Selam Ver</button>
+        <button type="button" onclick="gunyazdir()">Hangi Gün?</button>
+        <p id="p_sonuc"></p>
+        <script>
+            function selamver()
+            {
+                saat = new Date();
+                if(saat.getHours() > 18)
+                {
+                    document.getElementById("p_sonuc").innerText = "İyi Akşamlar";
+                }
+                else  if(saat.getHours() > 12)
+                {
+                    document.getElementById("p_sonuc").innerText = "Tünaydın";
+                }
+                else
+                {
+                    document.getElementById("p_sonuc").innerText = "Günaydın";
+                }
+                /*document.getElementById("p_sonuc").innerText = saat;*/
+            }
+            function gunyazdir()
+            {
+                /*document.getElementById("p_sonuc").innerText = new Date().getDay();*/
+                /*Haftanın Kaçıncı Günü*/
+                gun="";
+                switch(new Date().getDay())
+                {
+                    case 0: gun="Pazar";break;
+                    case 1: gun="Pazartesi";break;
+                    case 2: gun="Salı";break;
+                    case 3: gun="Çarşamba";break;
+                    case 4: gun="Perşembe";break;
+                    case 5: gun="Cuma";break;
+                    case 6: gun="Cumartesi";break;
+                    default: gun = "Hata Oluştu"; break;
+                }
+                document.getElementById("p_sonuc").innerText = gun;
+            }
+        </script>
+    </body>
+</html>
