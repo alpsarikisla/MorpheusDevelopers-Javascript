@@ -1,0 +1,53 @@
+<html>
+    <head>
+       <title>Nesne İle Dizi</title>
+       <style>
+        .satir{
+            padding: 10px 5px;
+        }
+        .satir button{
+            width: 160px;
+            padding: 5px;
+        }
+       </style>
+    </head>
+    <body>
+        <div class="form">
+            <div class="satir">
+                <Label for="tb_isim">İsim:</label></br>
+                <input type="text" id="tb_isim">
+            </div>
+            <div class="satir">
+                <Label for="tb_soyisim">Soyisim:</label></br>
+                <input type="text" id="tb_soyisim">
+            </div>
+            <div class="satir">
+                <Label for="tb_telefon">Telefon:</label></br>
+                <input type="text" id="tb_telefon">
+            </div>
+            <div class="satir">
+                <Label for="cb_katilim">Katıldı:</label>
+                <input type="checkbox" id="cb_katilim">
+            </div>
+            <div class="satir">
+                <button type="button" onclick="ekle()">Ekle</button>
+            </div>
+        </div>
+        
+        <p id="p_sonuc"></p>
+        <script>
+            dizi = new Array();
+            function ekle()
+            {
+                kisi = {
+                    isim : document.getElementById("tb_isim").value,
+                    soyisim : document.getElementById("tb_soyisim").value,
+                    telefon : document.getElementById("tb_telefon").value,
+                    katilim : document.getElementById("cb_katilim").checked
+                };
+                dizi.push(kisi);
+                console.log(dizi);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+       <title>Döngüler - While</title>
+    </head>
+    <body>
+       <p id="p_sonuc"></p>
+       <script>
+        metin = "";
+        sayac = 0;
+
+        /*do döngüde en az 1 kere çalışır*/
+
+        do{
+            metin += "Ben " + sayac + ". veriyim </br>" ;
+            sayac++;
+        }
+        while(sayac < 0)
+
+        document.getElementById("p_sonuc").innerHTML = metin;
+       </script>
+    </body>
+</html>

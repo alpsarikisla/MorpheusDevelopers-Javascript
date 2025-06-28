@@ -1,0 +1,90 @@
+<html>
+    <head>
+       <title>Döngüler - While</title>
+    </head>
+    <body>
+        <p id="p_sonuc"></p>
+        <p id="p_hakkinda"></p>
+        <p id="p_liste"></p>
+        <div>
+            <h2>Eklemeli Bişler Yapalım</h2>
+            <hr>
+            <input type="text" id="tb_isim">
+            <br>
+            <button type="button" onclick="sonaEkle()">Dizinin Sonuna Ekle</button>
+            <button type="button" onclick="basaEkle()">Dizinin Başına Ekle</button><br>
+            <button type="button" onclick="sonElemanıSil()">Sondaki Elemanı Sil</button>
+            <button type="button" onclick="ilkElemanıSil()">Baştaki elemanı Sil</button>
+            <ul id="ul_dizi"></ul>
+        </div>
+        <script>
+            Ogrenciler = ["Volkan","Doğa","Furkan","Berk","Burak","Deniz",65,SelamVer,"Semih","Okan","Nasuh","Mevlüt"];
+            Ogrenciler[0] = "Dilara";
+            Ogrenciler[1] = "Onur";
+            Ogrenciler[10] = "Volkan";
+            Ogrenciler[15] = "Doğa"; 
+           
+            document.getElementById("p_sonuc").innerHTML = Ogrenciler;
+            document.getElementById("p_hakkinda").innerHTML += "Dizi Uzunluğu = " + Ogrenciler.length + "</br>";
+            document.getElementById("p_hakkinda").innerHTML += "3. İndex = " + Ogrenciler[3] + "</br>";
+
+            /*Ogrenciler.length = 3;
+
+            Ogrenciler.length = 10;*/
+
+            liste = document.getElementById("p_liste");
+            liste.innerHTML="<ul>";
+            for(i=0; i<Ogrenciler.length;i++)
+            {
+                liste.innerHTML+="<li>"+Ogrenciler[i]+"</li>";
+            }
+            liste.innerHTML +="</ul>";
+            function SelamVer()
+            {
+                console.log("Selam Naber");
+            }
+        </script>
+        <script>
+            /*dizi = [];*/
+            /*dizi = new Array(10);*/
+            dizi = new Array();
+
+            function sonaEkle()
+            {
+                eleman = document.getElementById("tb_isim").value;
+
+                if(Array.isArray(dizi))//Eğer dizi isimli eleman dizi(Array) ise
+                {
+                    dizi.push(eleman);/*Dizinin sonuna ekleme yapar*/
+                }
+                yazdir()
+            }
+            function basaEkle()
+            {
+                eleman = document.getElementById("tb_isim").value;
+                dizi.unshift(eleman);/*Dizinin başına ekleme yapar*/
+                yazdir()
+            }
+            function sonElemanıSil()
+            {
+                dizi.pop();
+                yazdir();
+            }
+            function ilkElemanıSil()
+            {
+                dizi.shift();
+                yazdir();
+            }
+            function yazdir()
+            {
+                /*document.getElementById("ul_dizi").innerHTML = dizi.join("-");*//*Virgül yerine - koy*/
+                document.getElementById("ul_dizi").innerHTML = "";
+               
+                for(i=0; i<dizi.length;i++)
+                {
+                    document.getElementById("ul_dizi").innerHTML+="<li>"+dizi[i]+"</li>";
+                }
+            }
+        </script>
+    </body>
+</html>

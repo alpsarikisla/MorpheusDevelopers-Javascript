@@ -1,0 +1,16 @@
+<html>
+    <head>
+       <title>Dizi Birleştirme</title>
+    </head>
+    <body>
+        <p id="p_sonuc"></p>
+        <script>
+            karakterler = ["A","B","C"]
+            sayilar = [1,2]
+            
+            birlesim = karakterler.concat(sayilar); 
+
+            document.getElementById("p_sonuc").innerHTML = birlesim.join("-");
+        </script>
+    </body>
+</html>
