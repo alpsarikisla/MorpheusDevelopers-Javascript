@@ -1,0 +1,34 @@
+<html>
+    <head>
+       <title>Tarih İşlemleri</title>
+    </head>
+    <body>
+        <p id="p_sonuc"></p>
+        <script>
+            tarih = new Date();
+            //tarih = new Date("2025-01-29");
+            //tarih = new Date(1999,9,26,17,45,2,0);
+            //tarih = new Date(2024,18,45);
+            //tarih = new Date(1000000000000);//milisaniye
+            //tarih = new Date(0);
+            t_tarih = tarih.toString();
+            t_tarih = tarih.toDateString();
+            t_tarih = tarih.toUTCString();
+            //document.getElementById("p_sonuc").innerText = tarih;
+            //document.getElementById("p_sonuc").innerText = t_tarih;
+            parcali = tarih.getFullYear();
+            parcali = tarih.getMonth();
+            parcali = tarih.getHours();
+            aylar=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"]
+            //document.getElementById("p_sonuc").innerText = aylar[parcali];
+            //document.getElementById("p_sonuc").innerText = parcali;
+           
+            //ayarlar = {weekday:"long",year:"numeric",month:"long",day:"numeric"}
+            //format = tarih.toLocaleDateString("tr-TR", ayarlar);
+            tarih.setFullYear(2020);
+            tarih.setMonth(5);
+            tarih.setDate(tarih.getDate() + 20);
+            document.getElementById("p_sonuc").innerText = tarih;
+        </script>
+    </body>
+</html>

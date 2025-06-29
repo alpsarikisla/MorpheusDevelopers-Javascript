@@ -1,0 +1,23 @@
+<html>
+    <head>
+       <title>Dizilerde Sıralama</title>
+    </head>
+    <body>
+        <p id="p_sonuc"></p>
+        <p id="p_mesaj"></p> 
+        <script>
+            Ogrenciler = ["Volkan","Doğa","Furkan","Berk","Burak","Deniz",65,"Semih","Okan","Nasuh","Mevlüt"];
+            sayilar=[45,78,13]
+            /*document.getElementById("p_sonuc").innerHTML = Ogrenciler;*/
+            //document.getElementById("p_sonuc").innerHTML = Ogrenciler.sort();//Alfabetik ve büyüklüğe göre sıralar
+            //document.getElementById("p_sonuc").innerHTML = Ogrenciler.reverse();//Diziyi Ters Çevirir
+            //Ogrenciler.sort();
+            //Ogrenciler.reverse();
+            //document.getElementById("p_sonuc").innerHTML = Ogrenciler;
+            document.getElementById("p_sonuc").innerHTML = "Sıralı = " + Ogrenciler.toSorted();
+            document.getElementById("p_mesaj").innerHTML = Math.max(...sayilar);
+            //document.getElementById("p_mesaj").innerHTML = Math.min(...sayilar);
+        </script>
+      
+    </body>
+</html>
